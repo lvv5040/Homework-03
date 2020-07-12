@@ -1,0 +1,27 @@
+html,
+body,
+.wrapper {
+    height: 90%
+    margin: 0
+    padding: 0
+}
+
+body {
+font-family: sans-serif;
+background-color: yellow
+}
+
+.wrapper {
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  header {
+      text-align: center;
+      padding: 20px;
+      padding-top: 0px
+      color: grey;
+  }
+
+  
