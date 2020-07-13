@@ -8,7 +8,7 @@ body,
 
 body {
 font-family: sans-serif;
-background-color: yellow
+background-color: rgb(20, 201, 192)
 }
 
 .wrapper {
@@ -24,4 +24,60 @@ background-color: yellow
       color: grey;
   }
 
-  
+  .card {
+      background-color: tan;
+      border-radius: 7px;
+      border-width: 2px;
+      box-shadow: grey;
+      color: rgba(9, 29, 141, 0.473);
+      font-size: 20px;
+      margin: 0 auto;
+      max-width: 750px;
+      padding: 35px 45px;
+  }
+
+  .card-header:: after {
+      content: "";
+      display: block;
+      width: 90%;
+      background: blue;
+      height: 6px
+  }
+
+  .card-body {
+      min-height: 100px;
+  }
+
+  .card-footer {
+      text-align: center;
+  }
+
+  .card-footer ::before {
+      content: "";
+      display: block;
+      width: 100%;
+      background: rgb(8, 223, 205);
+      height: 3px;
+  }
+
+  .card-footer ::after {
+      content: "";
+      display: block;
+      clear: both;
+  }
+
+  .btn {
+      border: none;
+      background-color: floralwhite;
+      border-radius: 20px;
+      box-shadow: darkcyan;
+      color: rgb(5, 153, 158);
+      display: inline-block;
+      font-size: 24px;
+      line-height: 24px;
+      margin: 15px 15px 15px 20px;
+      padding: 15px 35px;
+      text-align: center;
+      cursor: pointer;
+      box-shadow: deepskyblue;
+  }
