@@ -23,7 +23,7 @@ var get = document.querySelector(#generate);
 get.addEventListener("click", function () {
     ps = generatePassword();
     document.getElementById("password").placeholder = ps;
-})
+});
 
 function generatePassword() {
     enter = parseInt(prompt("Must be between 7 and 70 characters"));
@@ -42,4 +42,88 @@ function generatePassword() {
         choices = alert("You must choose at least one!");
     }
 
-} 
+    //all of these are positive
+    else if (confirmNumber && confirmSymbol && confirmUppercase &&confirmLowercase) {
+        choices = symbol.concat(number, character, lowC);
+    }
+
+    //three positive
+    else if (confirmNumber && confirmSymbol && confirmUppercase) {
+    choices = symbol.concat(number, lowC);
+    }
+
+    else if (confirmNumber && confirmSymbol && confirmLowercase) {
+        choices = symbol.concat(number, character);
+    }
+
+    else if (confirmSymbol && confirmUppercase && confirmLowercase) {
+        choices = symbol.concat(character, lowC);
+    }
+
+    else if (confirmNumber && confirmUppercase && confirmLowercase) {
+        choices = symbol.concat(character, lowC)
+    }
+
+    //two positive
+    else if (confirmNumber && confirmSymbol) {
+        choices = symbol.concat(number);
+    }
+
+    else if (confirmSymbol && confirmLowercase) {
+        choices = symbol.concat(character);
+    }
+
+    else if (confirmSymbol && confirmUppercase) {
+        choices = symbol.concat(lowC);
+    }
+
+    else if (confirmNumber && confirmLowercase) {
+        choices = symbol.concat(number);
+    }
+
+    else if (confirmUppercase && confirmLowercase) {
+        choices = symbol.conact(lowC);
+    }
+
+    else if (confirmNumber && confirmUppercase) {
+        choices = symbol.concat(lowC);
+    }
+
+    //one postive
+    else if (confirmNumber) {
+        choices = number;
+    }
+
+
+    else if (confirmSymbol) {
+        choices = symbol;
+    }
+
+    else if (confirmUppercase) {
+        choices = space.concat(lowC);
+    }
+
+    else if (confirmLowercase) {
+        choices = character;
+    }
+
+    var password [];
+
+    for (car i = 0; i < enter; i++) {
+        var pickChoices = choices[Math.floor(Math.random() * choices.length)];
+        password.push(pickChoices);
+    }
+
+    var ps = password.join("");
+    UserInput(ps);
+    return ps;
+}
+
+//print 
+
+function UserInput(ps) {
+    document.getElementById("password").textContent = ps;
+}
+
+
+  
