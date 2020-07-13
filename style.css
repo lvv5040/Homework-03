@@ -81,3 +81,30 @@ background-color: rgb(20, 201, 192)
       cursor: pointer;
       box-shadow: deepskyblue;
   }
+
+  button [:disabled] {
+      cursor: :default;
+      background: white;
+  }
+
+  .float-right {
+      float: right;
+  }
+
+  #password {
+      appearance: none;
+      border: navy;
+      display: block;
+      width: 100%;
+      padding-top: 15px;
+      padding-right: 15px;
+      padding-left: 15px;
+      padding-bottom: 70px;
+      font-size: 25px;
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      resize: none;
+      overflow: hidden;
+  }
